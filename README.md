@@ -95,10 +95,10 @@ Comparison counts are **identical** between structures at every n (same Θ(n) wo
 ### Workload 4 — Min-Heap (n inserts + n extracts)
 | n | Insert ms | Extract ms | Comparisons | Sorted? |
 |---|---|---|---|---|
-| 100 | 0.025 | 0.071 | 1,069 | ✔ |
-| 1,000 | 0.052 | 0.117 | 17,322 | ✔ |
-| 10,000 | 0.447 | 0.775 | 239,284 | ✔ |
-| 100,000 | 1.919 | 7.683 | 3,059,283 | ✔ |
+| 100 | 0.025 | 0.071 | 1,069 | + |
+| 1,000 | 0.052 | 0.117 | 17,322 | + |
+| 10,000 | 0.447 | 0.775 | 239,284 | + |
+| 100,000 | 1.919 | 7.683 | 3,059,283 | + |
 
 Comparisons grow ×16.2/×13.8/×12.8 per decade, closely tracking the theoretical n·log₂n ratios (×15.0/×13.3/×12.5). `extractMin` always costs more than `insert` (full sift-down vs early-terminating sift-up). Output was non-decreasing in every trial — correctness confirmed alongside complexity.
 
